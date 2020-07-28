@@ -1,13 +1,7 @@
-{name:tomato, quantity:1, size:small, unit:each}
-{name:banana, quantity:4, size:large, unit:each}
-{name:soup, quantity:2, size:400, unit:millilitres}
-{name:tacos, quantity:6, size:each, unit:small}
-{name:potato, quantity:3, size:large, unit:each}
-{name:chicken, quantity:1, size:small, unit:each}
-{name:oranges, quantity:2, size:small, unit:each}
-{name:cheese, quantity:2, size:400, unit:grams}
-{name:salami, quantity:1, size:500, unit:grams}
-{name:chips, quantity:1, size:small, unit:packet}
-{name:pickles, quantity:4, size:small, unit:each}
-{name:yeast, quantity:1, size:400, unit:grams}
-{name:bread, quantity:1, size:load, unit:each}
+{name:tomato, quantity:1, size:small, unit:each},
+{name:banana, quantity:4, size:large, unit:each},
+{name:soup, quantity:2, size:400, unit:millilitres},
+{name:tacos, quantity:6, size:each, unit:small},
+{name:potato, quantity:3, size:large, unit:each},
+
+{'tomato': ' + name + ', '2': ' + quantity + ', 'small': ' + size + ', 'each': ' + unit + '}

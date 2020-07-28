@@ -54,7 +54,7 @@ def addItemToPantry():
         size = input("What is the size? small, large, 400: ")
         unit = input("What is it measured in? Each, grams, millilitres etc: ")
         pantryFile = open("pantry.txt", "a")
-        print("{name:" + name + ", quantity:" + quantity + ", size:" + size + ", unit:" + unit + "}", file=pantryFile)
+        print("{name:" + name + ", quantity:" + quantity + ", size:" + size + ", unit:" + unit + "},", file=pantryFile)
         pantryFile.close()
         #again = True
         #while again:
@@ -76,6 +76,14 @@ def addItemToPantry():
 def removeFromPantry():
     """This will prompt the user for the item to remove from pantry then remove the item from the pantry file."""
     print("This is the removeFromPantry function.")
+    emptyList = []
+    value = ""
+    pantryFile = open("pantry.txt", "r")
+    for line in pantryFile:
+        print(value)
+        emptyList.append(line)
+    pantryFile.close()
+    print(emptyList)
     
 
 def viewShoppingList():
