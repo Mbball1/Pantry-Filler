@@ -43,7 +43,7 @@ def addItemToPantry():
     print("This is the addItemToPantry funtion.\n")
     addMore = True
     while addMore:
-        print("First test")
+        #print("First test")
         addMore = False
         name = input("What is the name of the item you want to add?: ")
         quantity = input("How many would you like to add?: ")
@@ -52,21 +52,21 @@ def addItemToPantry():
         pantryFile = open("pantry.txt", "a")
         print("{name:" + name + ", quantity:" + quantity + ", size:" + size + ", unit:" + unit + "}", file=pantryFile)
         pantryFile.close()
-        again = True
-        while again:
-            print("Second test")
-            again = False
-            prompt = input("Would you like to add another ingredient? Y/N: ")
-            if prompt.lower() == "yes" or "y":
-                print("Third test")
-                addMore = True
-                break
-            elif prompt.lower() == "no" or "n":
-                print("fourth test")
-                break
-            else:
-                print("Fifth test")
-                print("Please type either yes or no.")
+        #again = True
+        #while again:
+        #    print("Second test")
+        #    again = False
+        #    prompt = input("Would you like to add another ingredient? Y/N: ")
+        #    if prompt.lower() == "yes" or "y":
+        #        print("Third test")
+        #        addMore = True
+        #        break
+        #    elif prompt.lower() == "no" or "n":
+        #        print("fourth test")
+        #        break
+        #    else:
+        #        print("Fifth test")
+        #        print("Please type either yes or no.")
         
         
 def removeFromPantry():
@@ -80,6 +80,33 @@ def viewShoppingList():
 def addItemToShoppingList():
     """This will add the item from the user to the shoppingList file."""
     print("This is the addItemToShoppingList function.")
+    addMore = True
+    while addMore:
+        addMore = False
+        name = input("What is the name of the item you want to add?: ")
+        quantity = input("How many would you like to add?: ")
+        size = input("What is the size? small, large, 400: ")
+        unit = input("What is it measured in? Each, grams, millilitres etc: ")
+        shoppingListFile = open("shoppingList.txt", "a")
+        print("{name:" + name + ", quantity:" + quantity + ", size:" + size + ", unit:" + unit + "}", file=shoppingListFile)
+        shoppingListFile.close()
+        again = input("Do you want to add something else?")
+        print(again)
+        while again.lower() != "yes" or "y" or "no" or "n":
+            print("inside while loop")
+            print(again)
+            if again.lower() == "yes" or "y":
+                print("Inside yes")
+                print(again)
+                print("Again == Yes ")
+                addMore = True
+                break
+            elif again.lower() == "no" or "n":
+                print("Inside no")
+                print(again)
+                print("Again == No ")
+                break
+    menu()
 
 def removeItemFromShoppingList():
     """This will remove the item from the shoppingList file."""
@@ -92,21 +119,21 @@ def viewRecipes():
 def createRecipe():
     """This will allow the user to add a recipe to the recipes file."""
     print("This is the createRecipe function.")
+    recipe = input("What is the name of the recipe? ")
+    addMore = True
+    while addMore:
+        addMore = False
+        name = input("What is the name of the item you want to add?: ")
+        quantity = input("How many would you like to add?: ")
+        size = input("What is the size? small, large, 400: ")
+        unit = input("What is it measured in? Each, grams, millilitres etc: ")
+        recipesFile = open("recipes.txt", "a")
+        print("{recipe:" + recipe + "name:" + name + ", quantity:" + quantity + ", size:" + size + ", unit:" + unit + "}", file=recipesFile)
+        recipesFile.close()
 
 def removeRecipe():
     """This will remove the specified recipe from the recipes file."""
     print("This is the removeRecipe function.")
-
-def again():
-    """This will ask the user if they want to add something else"""
-    while True:
-        answer = input("Do you want to add something else? Y/N: ")
-        if answer.lower() == "yes" or "y":
-            return 1
-        elif answer.lower() == "no" or "n":
-            return 0
-        else:
-            return -1
     
 
 menu()
