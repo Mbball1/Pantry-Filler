@@ -8,3 +8,4 @@
 {name:no, quantity:no, size:no, unit:no}
 {name:chips, quantity:2, size:large, unit:packets}
 {name:steak, quantity:1, size:500, unit:gram}
+{name:noodles, quantity:2, size:125, unit:gram}

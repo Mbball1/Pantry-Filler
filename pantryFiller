@@ -37,6 +37,10 @@ def menu():
 def viewPantry():
     """ This will return the items of the pantry from the pantry file."""
     print("This is the viewPantry function.")
+    pantryFile = open("pantry.txt")
+    for line in pantryFile:
+        print(line)
+    pantryFile.close()
 
 def addItemToPantry():
     """This will prompt the user for the item to add to pantry then save it to the pantry file."""
@@ -72,10 +76,15 @@ def addItemToPantry():
 def removeFromPantry():
     """This will prompt the user for the item to remove from pantry then remove the item from the pantry file."""
     print("This is the removeFromPantry function.")
+    
 
 def viewShoppingList():
     """This will return the contents of the shoppingList file."""
     print("This is the viewShoppingList function.")
+    shoppingListFile = open("shoppingList.txt")
+    for line in shoppingListFile:
+        print(line)
+    shoppingListFile.close()
 
 def addItemToShoppingList():
     """This will add the item from the user to the shoppingList file."""
@@ -91,19 +100,19 @@ def addItemToShoppingList():
         print("{name:" + name + ", quantity:" + quantity + ", size:" + size + ", unit:" + unit + "}", file=shoppingListFile)
         shoppingListFile.close()
         again = input("Do you want to add something else?")
-        print(again)
+        print("Again = " + again)
         while again.lower() != "yes" or "y" or "no" or "n":
             print("inside while loop")
-            print(again)
+            print("Again = " + again)
             if again.lower() == "yes" or "y":
                 print("Inside yes")
-                print(again)
+                print("Again = " + again)
                 print("Again == Yes ")
                 addMore = True
                 break
             elif again.lower() == "no" or "n":
                 print("Inside no")
-                print(again)
+                print("Again = " + again)
                 print("Again == No ")
                 break
     menu()
@@ -115,6 +124,10 @@ def removeItemFromShoppingList():
 def viewRecipes():
     """This will return all the recipies in the recipes file"""
     print("This is the viewRecipes function.")
+    recipeFile = open("recipes.txt")
+    for line in recipeFile:
+        print(line)
+    recipeFile.close()
 
 def createRecipe():
     """This will allow the user to add a recipe to the recipes file."""
