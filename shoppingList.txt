@@ -9,3 +9,10 @@
 {name:chips, quantity:2, size:large, unit:packets}
 {name:steak, quantity:1, size:500, unit:gram}
 {name:noodles, quantity:2, size:125, unit:gram}
+{name:new test day, quantity:4, size:small, unit:each}
+{name:Second test, quantity:2, size:3, unit:4}
+{name:Third test, quantity:no, size:no, unit:no}
+{name:no, quantity:no, size:no, unit:no}
+{name:fourth test lower case, quantity:no, size:no, unit:no}
+{name:swap test, quantity:no, size:no, unit:no}
+{name:yes test, quantity:yes, size:yes, unit:yes}

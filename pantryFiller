@@ -99,7 +99,6 @@ def addItemToShoppingList():
     print("This is the addItemToShoppingList function.")
     addMore = True
     while addMore:
-        addMore = False
         name = input("What is the name of the item you want to add?: ")
         quantity = input("How many would you like to add?: ")
         size = input("What is the size? small, large, 400: ")
@@ -107,22 +106,25 @@ def addItemToShoppingList():
         shoppingListFile = open("shoppingList.txt", "a")
         print("{name:" + name + ", quantity:" + quantity + ", size:" + size + ", unit:" + unit + "}", file=shoppingListFile)
         shoppingListFile.close()
-        again = input("Do you want to add something else?")
+        again = input(str("Do you want to add something else?"))
         print("Again = " + again)
-        while again.lower() != "yes" or "y" or "no" or "n":
+        while addMore:
             print("inside while loop")
             print("Again = " + again)
-            if again.lower() == "yes" or "y":
-                print("Inside yes")
-                print("Again = " + again)
-                print("Again == Yes ")
-                addMore = True
-                break
-            elif again.lower() == "no" or "n":
+            if again.lower() == str("no") or str("n"):
                 print("Inside no")
                 print("Again = " + again)
-                print("Again == No ")
+                print("Again actually == No ")
+                addMore = False
+            elif again.lower() == str("yes") or str("y"):
+                print("Inside yes")
+                print("Again = " + again)
+                print("Again actually == Yes ")
+                addMore = True
                 break
+            else:
+                print("That is not a valid option. \nPlease enter either yes or no:")
+
     menu()
 
 def removeItemFromShoppingList():
